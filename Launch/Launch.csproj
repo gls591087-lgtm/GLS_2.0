@@ -1,0 +1,47 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+    <AssemblyName>GLS 2.0</AssemblyName>
+    <RootNamespace>LocalServerLauncher</RootNamespace>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <NoWarn>$(NoWarn);8600;8601;8602;8603;8604;8618;8625;8765;0219;SYSLIB0005</NoWarn>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <PackageIcon>KartTranslator_MAINICON.ico</PackageIcon>
+    <ApplicationIcon>KartTranslator_MAINICON.ico</ApplicationIcon>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MySql.Data" Version="26.7.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="ile/**/*.cs" />
+    <Compile Remove="ile/**" /> 
+    <None Remove="ile/**" />
+    <Content Remove="ile/**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="KartTranslator_MAINICON.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\..\..\..\Downloads\iconsext\icons\KartTranslator_MAINICON.ico">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Common/**/*.cs">
+      <Nullable>disable</Nullable>
+      <NoWarn>$(NoWarn);8600;8602;8603;8618;8625;8765;0219;SYSLIB0005</NoWarn>
+    </Compile>
+  </ItemGroup>
+
+</Project>

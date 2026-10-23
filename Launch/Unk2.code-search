@@ -1,0 +1,23 @@
+# Query: Unk2
+# ContextLines: 1
+
+4 results - 2 files
+
+ClientSession.cs:
+  438                          short Unk1 = inPacket.ReadShort();
+  439:                         short Unk2 = inPacket.ReadShort();
+  440                          short item = inPacket.ReadShort();
+
+  449                              outPacket.WriteShort(Unk1);
+  450:                             outPacket.WriteShort(Unk2);
+  451                              outPacket.WriteShort(item);
+
+KartRider Server\ClientSession.cs:
+  430                      short Unk1 = inPacket.ReadShort();
+  431:                     short Unk2 = inPacket.ReadShort();
+  432                      short item = inPacket.ReadShort();
+
+  441                          outPacket.WriteShort(Unk1);
+  442:                         outPacket.WriteShort(Unk2);
+  443                          outPacket.WriteShort(item);
+z
